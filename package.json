@@ -1,0 +1,55 @@
+{
+  "name": "kylereicks",
+  "version": "1.0.0",
+  "description": "kylereicks.me",
+  "scripts": {
+    "build-images": "svgo --folder=src/images/social-icons/ --output=build/images/social-icons/",
+    "build-js": "node build-scripts/js.js",
+    "build-fonts": "cp src/css/scss/fonts/source-sans-pro/* build/css/fonts/source-sans-pro/",
+    "build-css": "node build-scripts/css.js",
+    "build": "npm run build-css && npm run build-fonts && npm run build-js && npm run build-images; ./node_modules/pug-cli/index.js src/index.pug -o build/"
+  },
+  "author": "Kyle Reicks",
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "color": "^3.0.0",
+    "cssnano": "^4.0.2",
+    "imagemin": "^5.3.1",
+    "imagemin-cli": "^3.0.0",
+    "jstransformer-markdown-it": "^2.1.0",
+    "node-sass": "^4.9.2",
+    "postcss": "^6.0.23",
+    "postcss-cli": "^5.0.1",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "svgo": "^1.0.5",
+    "uglify-es": "^3.3.9"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "IE >= 10",
+              "FireFox >= 46",
+              "Chrome >= 49",
+              "Safari >= 7"
+            ]
+          }
+        }
+      ]
+    ]
+  },
+  "browserslist": [
+    "IE >= 10",
+    "FireFox >= 46",
+    "Chrome >= 49",
+    "Safari >= 8"
+  ]
+}

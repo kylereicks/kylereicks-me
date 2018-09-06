@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+	head
+		title Kyle Reicks
+		meta( charset='utf-8' )
+		meta(
+			http-equiv='x-ua-compatible'
+			content='ie=edge'
+		)
+		meta(
+			name='description'
+			content='Web Developer and Digital Strategist based in Minneapolis, Minnesota'
+		)
+		meta(
+			name='viewport'
+			content='width=device-width, initial-scale=1, shrink-to-fit=no'
+		)
+		style
+			include ../build/css/critical.min.css
+	body
+		main(
+			role='main'
+			class='h-resume'
+		)
+			header.p-contact.h-card.color-shift
+				h1.p-name Kyle Reicks
+				p.p-summary A 
+					span.p-job-title Web Developer and Digital Strategist 
+					| based in 
+					span.h-adr
+						span.p-locality Minneapolis
+						| , 
+						span.p-region Minnesota
+				ul
+					li
+						a.u-url.twitter( href='https://twitter.com/kylereicks' )
+							include ../build/images/social-icons/twitter.svg
+					li
+						a.u-url.github( href='https://github.com/kylereicks' )
+							include ../build/images/social-icons/github.svg
+					li
+						a.u-url.wordpress( href='https://profiles.wordpress.org/kylereicks' )
+							include ../build/images/social-icons/wordpress.svg
+					li
+						a.u-url.linkedin( href='http://www.linkedin.com/in/kylereicks' )
+							include ../build/images/social-icons/linkedin.svg
+			section.projects
+				header
+					h1 Personal Projects
+					p A few of the projects I have up on GitHub.
+				include:markdown-it content/projects.md
+		script(
+			defer
+			src='js/neighborhood-map.min.js'
+		)
+		script(
+			defer
+			src='js/color-shift.min.js'
+		)
+		script
+			include ../build/js/load-defered-styles.min.js
+			include ../build/js/google-analytics-snipit.min.js
+		noscript
+			link(
+				href='css/defered.min.css'
+				rel='stylesheet'
+			)
