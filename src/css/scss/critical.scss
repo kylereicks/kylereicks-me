@@ -26,6 +26,7 @@ header {
 
 main {
 	> header {
+		font-family:'Critical Font Subset','Source Sans Pro', 'Source Sans Pro ExtraLight',Helvetica,sans-serif;
 		min-height: 100vh;
 		background: #556270;
 		color: #fff;
@@ -37,6 +38,10 @@ main {
 
 		@media ( min-width: 50rem ) {
 			font-size: 2em;
+		}
+
+		h1 {
+			font-family:'Critical Font Subset','Source Sans Pro', 'Source Sans Pro ExtraLight',Helvetica,sans-serif;
 		}
 
 		h1, p, ul {

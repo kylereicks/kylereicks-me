@@ -11,7 +11,7 @@ const init = event => {
 };
 
 const shiftBackgroundColor = ( element, nextHSL, frame = 0 ) => {
-	if ( frame > 60 ) {
+	if ( frame > 30 ) {
 		element.style.backgroundColor = 'hsl(' + nextHSL.join( ',' )  + ')';
 		if ( nextHSL[0] > 359 ) {
 			nextHSL[0] = 0;

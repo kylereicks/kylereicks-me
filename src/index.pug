@@ -49,14 +49,6 @@ html(lang="en")
 					h1 Personal Projects
 					p A few of the projects I have up on GitHub.
 				include:markdown-it content/projects.md
-		script(
-			defer
-			src='js/neighborhood-map.min.js'
-		)
-		script(
-			defer
-			src='js/color-shift.min.js'
-		)
 		script
 			include ../build/js/load-defered-styles.min.js
 			include ../build/js/google-analytics-snipit.min.js
@@ -65,3 +57,11 @@ html(lang="en")
 				href='css/defered.min.css'
 				rel='stylesheet'
 			)
+		script(
+			defer
+			src='js/color-shift.min.js'
+		)
+		script(
+			defer
+			src='js/neighborhood-map.min.js'
+		)
