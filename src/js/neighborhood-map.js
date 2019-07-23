@@ -6,7 +6,7 @@ const init = event => {
 	map = new GEOJSONtoSVG( container, { north: 44.951898, south: 44.897771, west: -93.328990, east: -93.199624 }, { longitudeAdjustment: 0.7 } ),
 	layers = {
 		'bicycle-pedestrian': 'https://opendata.arcgis.com/datasets/8d110c659d614474839c9c0642d8974a_0.geojson',
-		'street': 'https://opendata.arcgis.com/datasets/9d845322959a4b6193645957a995dac0_0.geojson',
+		'street': 'https://opendata.arcgis.com/datasets/ec28f7083c9346bf8a9fe44f8546c055_0.geojson',
 		'park': 'https://opendata.arcgis.com/datasets/a1847c4cc69940f99b46b16e2b4fe7e3_0.geojson',
 		'water': 'https://opendata.arcgis.com/datasets/0b2bdda8493c47f088100f831885bdce_0.geojson',
 	};
