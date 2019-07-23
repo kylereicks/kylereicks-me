@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+	head
+		title 404 -- Page not found.
+		meta( charset='utf-8' )
+		meta(
+			http-equiv='x-ua-compatible'
+			content='ie=edge'
+		)
+		meta(
+			name='description'
+			content='404 -- Page not found.'
+		)
+		meta(
+			name='viewport'
+			content='width=device-width, initial-scale=1, shrink-to-fit=no'
+		)
+		style
+			include ../build/css/404-critical.min.css
+	body
+		main(
+			role='main'
+			class='error-404 rain-storm'
+		)
+			header.color-shift
+				h1.code-404 404
+				p.p-summary The page you are looking for could not be found. 
+		script
+			include ../build/js/google-analytics-snipit.min.js
+		script(
+			defer
+			src='js/color-shift.min.js'
+		)
+		script(
+			defer
+			src='js/rain-storm.min.js'
+		)
