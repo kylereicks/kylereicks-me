@@ -1,3 +1,7 @@
+:root {
+	--background-hue: 211; 
+}
+
 *,:after,:before{
 	box-sizing:border-box
 }
@@ -29,6 +33,7 @@ main {
 		font-family:'Critical Font Subset','Source Sans Pro', 'Source Sans Pro ExtraLight',Helvetica,sans-serif;
 		min-height: 100vh;
 		background: #556270;
+		background: hsl(var( --background-hue, 211), 14%, 39%);
 		color: #fff;
 		color: rgba( 255, 255, 255, .8 );
 		display: flex;

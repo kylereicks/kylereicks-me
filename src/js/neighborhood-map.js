@@ -5,10 +5,10 @@ const init = event => {
 	const container = document.getElementsByTagName( 'main' )[0],
 	map = new GEOJSONtoSVG( container, { north: 44.951898, south: 44.897771, west: -93.328990, east: -93.199624 }, { longitudeAdjustment: 0.7 } ),
 	layers = {
-		'bicycle-pedestrian': 'https://opendata.arcgis.com/datasets/8d110c659d614474839c9c0642d8974a_0.geojson',
-		'street': 'https://opendata.arcgis.com/datasets/ec28f7083c9346bf8a9fe44f8546c055_0.geojson',
-		'park': 'https://opendata.arcgis.com/datasets/a1847c4cc69940f99b46b16e2b4fe7e3_0.geojson',
-		'water': 'https://opendata.arcgis.com/datasets/0b2bdda8493c47f088100f831885bdce_0.geojson',
+		'bicycle-pedestrian': '/data/Pedestrian_and_Bicycle_Trails.geojson',
+		'street': '/data/MPLS_Centerline.geojson',
+		'park': '/data/parks.geojson',
+		'water': '/data/water.geojson',
 	};
 	for ( let layer in layers ){
 		let request = new XMLHttpRequest();
@@ -34,7 +34,7 @@ const init = event => {
 		request.send();
 	}
 	let request = new XMLHttpRequest();
-	request.open( 'GET', encodeURI( 'http://api.kylereicks.me/wp-json/transit/VehicleLocations' ) );
+	request.open( 'GET', encodeURI( 'https://api.kylereicks.me/wp-json/transit/VehicleLocations' ) );
 	request.addEventListener( 'load', event => {
 		if ( 200 === request.status ) {
 			const transitData = JSON.parse( request.responseText );
@@ -75,7 +75,7 @@ const init = event => {
 	} );
 	request.send();
 	window.setInterval( () => {
-		request.open( 'GET', encodeURI( 'http://api.kylereicks.me/wp-json/transit/VehicleLocations' ) );
+		request.open( 'GET', encodeURI( 'https://api.kylereicks.me/wp-json/transit/VehicleLocations' ) );
 		request.send();
 	}, 35000 );
 };

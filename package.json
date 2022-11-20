@@ -6,8 +6,9 @@
     "build-images": "svgo --folder=src/images/social-icons/ --output=build/images/social-icons/",
     "build-js": "node build-scripts/js.js",
     "build-fonts": "cp src/css/scss/fonts/source-sans-pro/* build/css/fonts/source-sans-pro/",
+    "build-data": "cp src/data/* build/data/",
     "build-css": "node build-scripts/css.js",
-    "build": "npm run build-css && npm run build-fonts && npm run build-js && npm run build-images; ./node_modules/pug-cli/index.js src/index.pug -o build/"
+    "build": "npm run build-css && npm run build-fonts && npm run build-js && npm run build-images && npm run build-data; ./node_modules/pug-cli/index.js src/index.pug -o build/"
   },
   "author": "Kyle Reicks",
   "devDependencies": {
@@ -15,18 +16,18 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babelify": "^8.0.0",
-    "browserify": "^16.2.2",
-    "color": "^3.0.0",
-    "cssnano": "^4.0.2",
+    "browserify": "^16.5.2",
+    "color": "^3.2.1",
+    "cssnano": "^4.1.11",
     "imagemin": "^5.3.1",
     "imagemin-cli": "^3.0.0",
     "jstransformer-markdown-it": "^2.1.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.14.1",
     "postcss": "^6.0.23",
-    "postcss-cli": "^5.0.1",
-    "pug": "^2.0.3",
+    "postcss-cli": "^6.1.3",
+    "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
-    "svgo": "^1.0.5",
+    "svgo": "^1.3.2",
     "uglify-es": "^3.3.9"
   },
   "babel": {
